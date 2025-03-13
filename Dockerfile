@@ -6,7 +6,7 @@ ENV CFLAGS="-Wno-error"
 
 # Запускаем заданную инструкцию внутри контейнера
 RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
-RUN pip install Flask==0.10.0 uWSGI==2.0.8 requests==2.5.1
+RUN pip install Flask==0.10.0 uWSGI==2.0.8 requests==2.5.1 redis==2.10.3
 # Определяем рабочий каталог для последующих инструкций
 WORKDIR /app
 # Копируем содержимое наших каталогов в каталог образа
