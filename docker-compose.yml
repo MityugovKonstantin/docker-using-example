@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  # Created container name
+  identidock:
+    # Path to Dockerfile to create image
+    build: .
+    # Init opened ports
+    ports:
+      - "5000:5000"
+    # Init environment variables 
+    environment:
+      ENV: DEV
+    # Определение томов для монтирования
+    volumes:
+      - ./app:/app
